@@ -8,6 +8,7 @@ Muhammad Rafli Subekhi (192410103069)
 Agung Rizqi Alhana (192410103070)
 Ferry Irawan (192410103082)
 
+#Kontributor
 https://github.com/XBrT-1
 https://github.com/raflix1
 https://github.com/agung-bit
