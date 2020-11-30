@@ -1,3 +1,4 @@
+#include <windows.h>
 #include <GL/gl.h> //Import library yang akan digunakan
 #include <GL/glu.h>
 #include <GL/glut.h> // library grafik dari opengl
@@ -8,6 +9,29 @@ Pesawat pesawat;
 float x;
 float y;
 
+void timer(int data)
+{
+    // Jika menekan tombol panah kiri
+    if(GetAsyncKeyState(VK_LEFT)){
+        x-=0.1f;
+    }
+    // Jika menekan tombol panah kanan
+    else if(GetAsyncKeyState(VK_RIGHT)){
+        x+=0.1f;
+    }
+
+    // Jika menekan tombol panah atas
+    if(GetAsyncKeyState(VK_UP)){
+        y+=0.1f;
+        }
+    // Jika menekan tombol panah bawah
+    else if (GetAsyncKeyState(VK_DOWN)){
+        y-=0.1f;
+    }
+
+    glutPostRedisplay();
+	glutTimerFunc(1,timer,0);
+}
 
 void displayMe(void) {
     glClearColor(0,1,1,1);
@@ -40,6 +64,7 @@ int main(int argc, char** argv){ // atur display
 	glutInitWindowPosition(0, 0); // posisi program
 	glutCreateWindow("bby"); // nama window
 	glutDisplayFunc(displayMe); //
+	glutTimerFunc(1,timer,0);
 	myinit();
 	gluOrtho2D(0, 50, 0, 50); //ukuran sumbu X dan Y
 	glutMainLoop();
