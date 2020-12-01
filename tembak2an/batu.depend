@@ -222,15 +222,31 @@
 
 1606717351 d:\code3\batu\pesawat.h
 
-1606756159 source:d:\grafika komputer\babykids\tembak2an\main.cpp
+1606796607 source:d:\grafika komputer\babykids\tembak2an\main.cpp
+	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>
-	"planet.h"
+	"pesawat.h"
+	"ufo.h"
 
-1606750009 d:\grafika komputer\babykids\tembak2an\pesawat.h
+1606787128 d:\grafika komputer\babykids\tembak2an\pesawat.h
 
 1606753464 d:\grafika komputer\babykids\tembak2an\satelit.h
 
 1606757697 d:\grafika komputer\babykids\tembak2an\planet.h
+
+1606790061 source:e:\..dokumen\unej  if'19\smstr 3\grafkom\babykids\tembak2an\main.cpp
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+	"pesawat.h"
+	"ufo.h"
+
+1606789881 e:\..dokumen\unej  if'19\smstr 3\grafkom\babykids\tembak2an\pesawat.h
+
+1606793490 e:\..dokumen\unej  if'19\smstr 3\grafkom\babykids\tembak2an\ufo.h
+
+1606796607 d:\grafika komputer\babykids\tembak2an\ufo.h
 
