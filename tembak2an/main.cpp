@@ -3,10 +3,8 @@
 #include <GL/glu.h>
 #include <GL/glut.h> // library grafik dari opengl
 #include "pesawat.h"
-#include "ufo.h"
 
 Pesawat pesawat;
-Ufo ufo;
 
 float x;
 float y;
@@ -42,7 +40,6 @@ void displayMe(void) {
     glPushMatrix();
     glTranslatef(x, y, 0);
     pesawat.drawPesawat();
-    ufo.drawUfo();
     glPopMatrix();
 
     glFlush();

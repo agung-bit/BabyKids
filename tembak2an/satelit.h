@@ -1,6 +1,6 @@
-class satelit{
+class Satelit{
     public:
-        void drawsatelit() {
+        void drawSatelit() {
             glBegin(GL_POLYGON); //badan satelit
             glColor3f(0,0,0);
             glVertex2f(6.46, 6.76); //titik untuk line
