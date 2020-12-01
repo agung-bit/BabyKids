@@ -120,6 +120,10 @@ class Ufo{
             glVertex2f(3.46, 1.4);
             glVertex2f(3.46, 1.49);
             glVertex2f(3.45, 1.56); //S1
+            glVertex2f();
+            glVertex2f();
+            glVertex2f();
+            glVertex2f();
             glEnd();
         }
 };
