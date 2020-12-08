@@ -122,6 +122,89 @@ class planetnamex{
             glEnd();
 
         }
+        void munyerSatelit(){
+
+            glPushMatrix();
+            glTranslatef(10, satelitWoi[0], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(40, satelitWoi[1], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(10, satelitWoi[2], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(80, satelitWoi[2], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(35, satelitWoi[3], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(65, satelitWoi[4], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(-10, satelitWoi[5], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(30, satelitWoi[6], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(60, satelitWoi[7], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(90, satelitWoi[6], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(-20, satelitWoi[1], 0);
+            drawSatelit();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(93, satelitWoi[8], 0);
+            drawSatelit();
+            glPopMatrix();
+        }
+
+        float satelitWoi[9] = {50, 80, 100, 125, 140, 145, 165, 50, 70};
+
+        void moveSatelit(){
+            satelitWoi[0] -= 0.05;
+            satelitWoi[1] -= 0.05;
+            satelitWoi[2] -= 0.05;
+            satelitWoi[3] -= 0.05;
+            satelitWoi[4] -= 0.05;
+            satelitWoi[5] -= 0.05;
+            satelitWoi[6] -= 0.05;
+            satelitWoi[7] -= 0.05;
+            satelitWoi[8] -= 0.05;
+
+            for (int i = 0; i <= sizeof(satelitWoi); i++){
+                if (satelitWoi[i] <= -60){
+                    satelitWoi[i] = 90;
+                }
+            }
+
+        }
 };
 
 

@@ -3,30 +3,45 @@
 #include <GL/glu.h>
 #include <GL/glut.h> // library grafik dari opengl
 #include "pesawat.h"
+#include "satelit.h"
 
 Pesawat pesawat;
+Satelit satelit;
 
 float x;
 float y;
 
+float grafitasi = 0;
+bool bergeser = true;
+
 void timer(int data)
 {
+    satelit.moveSatelit();
+
     // Jika menekan tombol panah kiri
     if(GetAsyncKeyState(VK_LEFT)){
-        x-=0.1f;
+        if (x>=0){
+            x -= 0.1f;
+        }
     }
     // Jika menekan tombol panah kanan
     else if(GetAsyncKeyState(VK_RIGHT)){
-        x+=0.1f;
+        if (x<=93) {
+            x+=0.1f;
+        }
     }
 
     // Jika menekan tombol panah atas
     if(GetAsyncKeyState(VK_UP)){
-        y+=0.1f;
+        if (y<=95) {
+            y+=0.1f;
+            }
         }
     // Jika menekan tombol panah bawah
     else if (GetAsyncKeyState(VK_DOWN)){
-        y-=0.1f;
+        if (y>=0){
+            y-=0.1f;
+        }
     }
 
     glutPostRedisplay();
@@ -36,6 +51,20 @@ void timer(int data)
 void displayMe(void) {
     glClearColor(0,1,1,1);
     glClear(GL_COLOR_BUFFER_BIT);
+
+    glPushMatrix();
+    glBegin(GL_POLYGON);
+    glColor3ub(138, 43, 226);
+    glVertex2f(100,0);
+    glVertex2f(0,0);
+    glVertex2f(0,100);
+    glVertex2f(100,100);
+    glEnd();
+    glPopMatrix();
+
+    glPushMatrix();
+    satelit.munyerSatelit();
+    glPopMatrix();
 
     glPushMatrix();
     glTranslatef(x, y, 0);
@@ -56,17 +85,17 @@ void myinit() {
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
-
 int main(int argc, char** argv){ // atur display
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
-	glutInitWindowSize(500, 500); // ukuran display
-	glutInitWindowPosition(0, 0); // posisi program
-	glutCreateWindow("bby"); // nama window
+	glutInitWindowSize(900, 600); // ukuran display
+	glutInitWindowPosition(50, 0); // posisi program
+	glutCreateWindow("BIBU"); // nama window
 	glutDisplayFunc(displayMe); //
-	glutTimerFunc(1,timer,0);
 	myinit();
-	gluOrtho2D(0, 50, 0, 50); //ukuran sumbu X dan Y
+	glutTimerFunc(1,timer,0);
+	gluOrtho2D(0, 100, 0, 100); //ukuran sumbu X dan Y
 	glutMainLoop();
 	return 0;
 }
+
