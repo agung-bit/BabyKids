@@ -17,25 +17,6 @@ class Pesawat{
             glColor3f(0,1,0);
             glVertex2f(3.4, 4); //titik untuk line
             glVertex2f(3.4, 2); //titik untuk line
-            glVertex2f(3.6, 1);class Pesawat{
-    public:
-        void drawPesawat() {
-            glBegin(GL_POLYGON); //ujung pesawat
-            glColor3f(0,0,0);
-            glVertex2f(4, 5); //titik untuk line
-            glVertex2f(3.71517, 4.73612); //titik untuk line
-            glVertex2f(3.49231, 4.40411);
-            glVertex2f(3.49231, 4.40411);
-            glVertex2f(3.4, 4);
-            glVertex2f(4.6, 4);
-            glVertex2f(4.51563, 4.38592);
-            glVertex2f(4.51563, 4.38592);
-            glEnd();
-
-            glBegin(GL_POLYGON); //badan pesawat
-            glColor3f(0,1,0);
-            glVertex2f(3.4, 4); //titik untuk line
-            glVertex2f(3.4, 2); //titik untuk line
             glVertex2f(3.6, 1);
             glVertex2f(4.4,1);
             glVertex2f(4.6, 2);

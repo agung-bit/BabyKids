@@ -250,15 +250,17 @@
 
 1606796607 d:\grafika komputer\babykids\tembak2an\ufo.h
 
-1606804498 source:d:\grafkom\babykids\tembak2an\main.cpp
+1607427911 source:d:\grafkom\babykids\tembak2an\main.cpp
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
 	<GL/glut.h>
 	"pesawat.h"
-	"ufo.h"
+	"satelit.h"
 
-1606807726 d:\grafkom\babykids\tembak2an\pesawat.h
+1607427884 d:\grafkom\babykids\tembak2an\pesawat.h
 
 1606804498 d:\grafkom\babykids\tembak2an\ufo.h
+
+1607427882 d:\grafkom\babykids\tembak2an\satelit.h
 
