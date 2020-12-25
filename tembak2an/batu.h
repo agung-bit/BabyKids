@@ -1,8 +1,8 @@
-class Pesawat{
+class Batu{
     public:
-        void drawPesawat() {
+        void drawBatu() {
             glBegin(GL_POLYGON);
-            glColor3f(0,0,0);
+            glColor3ub(255,69,0);
             glVertex2f(1.84461, 0.30495); //titik untuk line
             glVertex2f(1.62115, 0.42983); //titik untuk line
             glVertex2f(1.35169, 0.64014);
@@ -18,7 +18,7 @@ class Pesawat{
             glEnd();
 
             glBegin(GL_POLYGON);
-            glColor3f(0,0,0);
+            glColor3f(255,225,0);
             glVertex2f(1.51906, 0.65175); //titik untuk line
             glVertex2f(1.5147, 0.59063); //titik untuk line
             glVertex2f(1.53871, 0.56334);
@@ -28,7 +28,7 @@ class Pesawat{
             glEnd();
 
             glBegin(GL_POLYGON);
-            glColor3f(0,0,0);
+            glColor3f(255,182,193);
             glVertex2f(1.93522, 0.73174); //titik untuk line
             glVertex2f(1.84556, 0.62793); //titik untuk line
             glVertex2f(1.94308, 0.60433);
@@ -37,7 +37,7 @@ class Pesawat{
             glEnd();
 
             glBegin(GL_POLYGON);
-            glColor3f(0,0,0);
+            glColor3f(255,182,193);
             glVertex2f(1.73954, 0.54281); //titik untuk line
             glVertex2f(1.70473, 0.48312); //titik untuk line
             glVertex2f(1.74949, 0.48312);
@@ -45,7 +45,7 @@ class Pesawat{
             glEnd();
 
             glBegin(GL_POLYGON);
-            glColor3f(0,0,0);
+            glColor3f(255,69,0);
             glVertex2f(2.03431, 0.93936);
             glVertex2f(2, 0.9); //titik untuk line
             glVertex2f(2.01229, 0.82296);
@@ -54,8 +54,8 @@ class Pesawat{
             glVertex2f(2.08149, 0.92992);
             glEnd();
 
-            glBegin(GL_POLYGON); //badan pinggir kiri
-            glColor3f(0,0,0);
+            glBegin(GL_POLYGON);
+            glColor3f(255,69,0);
             glVertex2f(1.5011, 1.0526); //titik untuk line
             glVertex2f(1.45863, 1.0007); //titik untuk line
             glVertex2f(1.49638, 0.96924);

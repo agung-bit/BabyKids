@@ -4,9 +4,15 @@
 #include <GL/glut.h> // library grafik dari opengl
 #include "pesawat.h"
 #include "satelit.h"
+#include "batu.h"
+#include "meteor.h"
+#include "planet.h"
 
 Pesawat pesawat;
 Satelit satelit;
+Batu batu;
+Meteor meteor;
+Planet planet;
 
 float x;
 float y;
@@ -17,6 +23,7 @@ bool bergeser = true;
 void timer(int data)
 {
     satelit.moveSatelit();
+    meteor.moveMeteorid();
 
     // Jika menekan tombol panah kiri
     if(GetAsyncKeyState(VK_LEFT)){
@@ -54,12 +61,24 @@ void displayMe(void) {
 
     glPushMatrix();
     glBegin(GL_POLYGON);
-    glColor3ub(138, 43, 226);
+    glColor3ub(239, 255, 255);
     glVertex2f(100,0);
     glVertex2f(0,0);
+    glColor3ub(0, 0, 0);
     glVertex2f(0,100);
     glVertex2f(100,100);
     glEnd();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslated(30,50,0);
+    glScaled(2,2,0);
+    planet.drawPlanet();
+    glPopMatrix();
+
+    glPushMatrix();
+    glScaled(10,30,0);
+    batu.drawBatu();
     glPopMatrix();
 
     glPushMatrix();
@@ -67,7 +86,13 @@ void displayMe(void) {
     glPopMatrix();
 
     glPushMatrix();
+    glScaled(1,1.3,0);
+    meteor.munyerMeteorid();
+    glPopMatrix();
+
+    glPushMatrix();
     glTranslatef(x, y, 0);
+    glScaled(3,3,0);
     pesawat.drawPesawat();
     glPopMatrix();
 

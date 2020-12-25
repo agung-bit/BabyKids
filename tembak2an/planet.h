@@ -1,6 +1,6 @@
-class planet{
+class Planet{
     public:
-        void drawplanet() {
+        void drawPlanet() {
             glBegin(GL_POLYGON); //badan planet
             glColor3f(0,0,0);
             glVertex2f(25, 25); //titik untuk line

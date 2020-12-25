@@ -1,8 +1,8 @@
-class meteor{
+class Meteor{
     public:
-        void drawmeteor() {
+        void drawMeteor() {
             glBegin(GL_POLYGON); //badan meteor
-            glColor3f(0,0,0);
+            glColor3f(225,165,0);
             glVertex2f(12.58, 38.05); //titik untuk line
             glVertex2f(10.37, 37.33); //titik untuk line
             glVertex2f(8.44, 36.01);
@@ -25,7 +25,7 @@ class meteor{
             glEnd();
 
             glBegin(GL_POLYGON); //pola tengah atas
-            glColor3f(1,1,1);
+            glColor3f(225,69,0);
             glVertex2f(9.96, 35.58); //titik untuk line
             glVertex2f(11.31, 36.68); //titik untuk line
             glVertex2f(12.54, 36.09);
@@ -38,7 +38,7 @@ class meteor{
             glEnd();
 
             glBegin(GL_POLYGON); //pola kanan atas
-            glColor3f(1,1,1);
+            glColor3f(225,0,0);
             glVertex2f(16.59, 35.88); //titik untuk line
             glVertex2f(15.55, 35.22); //titik untuk line
             glVertex2f(15.58, 34.2);
@@ -48,7 +48,7 @@ class meteor{
             glEnd();
 
             glBegin(GL_POLYGON); //pola tengah
-            glColor3f(1,1,1);
+            glColor3f(225,0,0);
             glVertex2f(11.18, 33.34); //titik untuk line
             glVertex2f(11.22, 34.73); //titik untuk line
             glVertex2f(12.61, 35.32);
@@ -66,7 +66,7 @@ class meteor{
             glEnd();
 
             glBegin(GL_POLYGON); //pola kiri atas
-            glColor3f(0,0,0);
+            glColor3f(225,0,0);
             glVertex2f(7.11, 34.44); //titik untuk line
             glVertex2f(6.15, 32.75); //titik untuk line
             glVertex2f(5.79, 31.18);
@@ -82,7 +82,7 @@ class meteor{
             glEnd();
 
             glBegin(GL_POLYGON); //pola kiri bawah
-            glColor3f(0,0,0);
+            glColor3f(225,0,0);
             glVertex2f(7.53, 26.84); //titik untuk line
             glVertex2f(9.28, 25.7); //titik untuk line
             glVertex2f(11.45, 25.04);
@@ -100,7 +100,7 @@ class meteor{
             glEnd();
 
             glBegin(GL_POLYGON); //pola tengah bawah
-            glColor3f(1,1,1);
+            glColor3f(225,0,0);
             glVertex2f(14.99, 29.77); //titik untuk line
             glVertex2f(13.1, 28.13); //titik untuk line
             glVertex2f(12.51, 27.09);
@@ -111,7 +111,7 @@ class meteor{
             glEnd();
 
             glBegin(GL_POLYGON); //pola kanan bawah
-            glColor3f(1,1,1);
+            glColor3f(225,0,0);
             glVertex2f(18,30); //titik untuk line
             glVertex2f(19.38, 31.34); //titik untuk line
             glVertex2f(19.45, 32.81);
@@ -127,5 +127,88 @@ class meteor{
 
 
 
+        }
+
+        void munyerMeteorid(){
+
+            glPushMatrix();
+            glTranslatef(10, meteoridWoi[0], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(40, meteoridWoi[1], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(10, meteoridWoi[2], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(80, meteoridWoi[2], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(35, meteoridWoi[3], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(65, meteoridWoi[4], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(-10, meteoridWoi[5], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(30, meteoridWoi[6], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(60, meteoridWoi[7], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(90, meteoridWoi[6], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(-20, meteoridWoi[1], 0);
+            drawMeteor();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(93, meteoridWoi[8], 0);
+            drawMeteor();
+            glPopMatrix();
+        }
+
+        float meteoridWoi[9] = {50, 80, 100, 125, 140, 145, 165, 50, 70};
+
+        void moveMeteorid(){
+            meteoridWoi[0] -= 0.05;
+            meteoridWoi[1] -= 0.05;
+            meteoridWoi[2] -= 0.05;
+            meteoridWoi[3] -= 0.05;
+            meteoridWoi[4] -= 0.05;
+            meteoridWoi[5] -= 0.05;
+            meteoridWoi[6] -= 0.05;
+            meteoridWoi[7] -= 0.05;
+            meteoridWoi[8] -= 0.05;
+
+            for (int i = 0; i <= sizeof(meteoridWoi); i++){
+                if (meteoridWoi[i] <= -60){
+                    meteoridWoi[i] = 90;
+                }
+            }
         }
 };
