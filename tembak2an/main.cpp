@@ -8,6 +8,7 @@
 #include "meteor.h"
 #include "planet.h"
 #include "ufo.h"
+#include "peluru.h"
 
 Pesawat pesawat;
 Satelit satelit;
@@ -15,9 +16,15 @@ Batu batu;
 Meteor meteor;
 Planet planet;
 Ufo ufo;
+Peluru peluru;
 
 float x;
 float y;
+float ranX = (rand() % 40 + 5);
+float ranY = 120;
+float peluruX;
+float peluruY;
+float ujung = 5;
 
 float grafitasi = 0;
 bool bergeser = true;
@@ -26,6 +33,9 @@ void timer(int data)
 {
     satelit.moveSatelit();
     meteor.moveMeteorid();
+    ufo.moveUfo();
+    peluru.movePeluru();
+
 
     // Jika menekan tombol panah kiri
 
@@ -52,6 +62,16 @@ void timer(int data)
         if (y>=0){
             y-=0.1f;
         }
+    }
+
+    srand((unsigned) time(0)); //srand supaya tiap pemanggilan random valuenya selalu berubah
+    if (ranY >= -30) {
+        ranY -= 0.03f;
+        //cout << "x1 = " << x1 << endl;
+    } else if (ranY < -30) {
+        ranY = 120;
+        ranX = (rand() % 80);
+        //cout << "ranY = " << ranY;
     }
 
     glutPostRedisplay();
@@ -89,8 +109,25 @@ void displayMe(void) {
     glPopMatrix();
 
     glPushMatrix();
-    glScaled(1,1,0);
+    glScaled(0.5,0.5,0);
     meteor.munyerMeteorid();
+    glPopMatrix();
+
+    glPushMatrix();
+    glScaled(3,3,0);
+    ufo.munyerUfo();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(ranX,ranY,0);
+    //pesawatt.colPesawatt();
+    pesawatt.drawPesawatt();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(peluruX, peluruY, 0);
+    //peluru.colPeluru();
+    peluru.manggilPeluru();
     glPopMatrix();
 
     glPushMatrix();
@@ -98,12 +135,6 @@ void displayMe(void) {
     glScaled(3,3,0);
     pesawat.drawPesawat();
     glPopMatrix();
-
-    glPushMatrix();
-    glScaled(3,3,0);
-    ufo.drawUfo();
-    glPopMatrix();
-
 
     glFlush();
     glutSwapBuffers();
@@ -125,7 +156,7 @@ int main(int argc, char** argv){ // atur display
 	glutInitWindowSize(900, 600); // ukuran display
 	glutInitWindowPosition(50, 0); // posisi program
 	glutCreateWindow("BIBU"); // nama window
-	glutDisplayFunc(displayMe); //
+	glutDisplayFunc(displayMe);
 	myinit();
 	glutTimerFunc(1,timer,0);
 	gluOrtho2D(0, 100, 0, 100); //ukuran sumbu X dan Y

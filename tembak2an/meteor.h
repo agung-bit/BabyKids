@@ -167,21 +167,6 @@ class Meteor{
             glPopMatrix();
 
             glPushMatrix();
-            glTranslatef(80, meteoridWoi[2], 0);
-            drawMeteor();
-            glPopMatrix();
-
-            glPushMatrix();
-            glTranslatef(35, meteoridWoi[3], 0);
-            drawMeteor();
-            glPopMatrix();
-
-            glPushMatrix();
-            glTranslatef(65, meteoridWoi[4], 0);
-            drawMeteor();
-            glPopMatrix();
-
-            glPushMatrix();
             glTranslatef(-10, meteoridWoi[5], 0);
             drawMeteor();
             glPopMatrix();
@@ -196,18 +181,9 @@ class Meteor{
             drawMeteor();
             glPopMatrix();
 
-            glPushMatrix();
-            glTranslatef(90, meteoridWoi[6], 0);
-            drawMeteor();
-            glPopMatrix();
 
             glPushMatrix();
             glTranslatef(-20, meteoridWoi[1], 0);
-            drawMeteor();
-            glPopMatrix();
-
-            glPushMatrix();
-            glTranslatef(93, meteoridWoi[8], 0);
             drawMeteor();
             glPopMatrix();
         }

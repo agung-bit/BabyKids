@@ -36,5 +36,29 @@ class Peluru{
             glVertex2f(0.29, 0.1);
 
         }
+
+       void manggilPeluru(){
+
+            glPushMatrix();
+            glTranslatef(15, peluruMulai[0], 0);
+            drawPeluru();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(24, peluruMulai[0], 0);
+            drawPeluru();
+            glPopMatrix();
+        }
+        float peluruMulai[1] = {10};
+
+        void movePeluru(){
+            peluruMulai[0] += 0.05;
+
+            for (int i = 0; i <= sizeof(peluruMulai); i++){
+                if (peluruMulai[i] >= 100){
+                    peluruMulai[i] = 5;
+                }
+            }
+        }
 };
 

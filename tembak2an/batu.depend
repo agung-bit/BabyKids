@@ -250,7 +250,7 @@
 
 1606796607 d:\grafika komputer\babykids\tembak2an\ufo.h
 
-1608880220 source:d:\grafkom\babykids\tembak2an\main.cpp
+1608901771 source:d:\grafkom\babykids\tembak2an\main.cpp
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
@@ -260,16 +260,17 @@
 	"batu.h"
 	"meteor.h"
 	"planet.h"
+	"ufo.h"
 
 1607427884 d:\grafkom\babykids\tembak2an\pesawat.h
 
-1606804498 d:\grafkom\babykids\tembak2an\ufo.h
+1608901978 d:\grafkom\babykids\tembak2an\ufo.h
 
-1608865556 d:\grafkom\babykids\tembak2an\satelit.h
+1608900294 d:\grafkom\babykids\tembak2an\satelit.h
 
 1608865131 d:\grafkom\babykids\tembak2an\batu.h
 
-1608880220 d:\grafkom\babykids\tembak2an\meteor.h
+1608902740 d:\grafkom\babykids\tembak2an\meteor.h
 
 1608866322 d:\grafkom\babykids\tembak2an\planet.h
 

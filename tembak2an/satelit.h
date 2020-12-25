@@ -189,7 +189,7 @@ class Satelit{
             satelitWoi[8] -= 0.05;
 
             for (int i = 0; i <= sizeof(satelitWoi); i++){
-                if (satelitWoi[i] <= -60){
+                if (satelitWoi[i] <= -70){
                     satelitWoi[i] = 90;
                 }
             }

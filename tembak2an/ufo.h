@@ -122,4 +122,87 @@ class Ufo{
             glVertex2f(3.45, 1.56); //S1
             glEnd();
         }
+        void munyerUfo(){
+
+            glPushMatrix();
+            glTranslatef(5, ufoWoi[0], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(20, ufoWoi[1], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(10, ufoWoi[2], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(15, ufoWoi[2], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(12, ufoWoi[3], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(8, ufoWoi[4], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(0, ufoWoi[5], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(10, ufoWoi[6], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(25, ufoWoi[7], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(15, ufoWoi[6], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(0, ufoWoi[1], 0);
+            drawUfo();
+            glPopMatrix();
+
+            glPushMatrix();
+            glTranslatef(20, ufoWoi[8], 0);
+            drawUfo();
+            glPopMatrix();
+        }
+
+        float ufoWoi[9] = {50, 20, 30, 25, 40, 45, 65, 50, 70};
+
+        void moveUfo(){
+            ufoWoi[0] -= 0.02;
+            ufoWoi[1] -= 0.02;
+            ufoWoi[2] -= 0.02;
+            ufoWoi[3] -= 0.02;
+            ufoWoi[4] -= 0.02;
+            ufoWoi[5] -= 0.02;
+            ufoWoi[6] -= 0.02;
+            ufoWoi[7] -= 0.02;
+            ufoWoi[8] -= 0.02;
+
+            for (int i = 0; i <= sizeof(ufoWoi); i++){
+                if (ufoWoi[i] <= -60){
+                    ufoWoi[i] = 100;
+                }
+            }
+
+        }
 };
