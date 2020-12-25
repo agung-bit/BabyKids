@@ -45,6 +45,7 @@
 		<Unit filename="batu.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="meteor.h" />
+		<Unit filename="peluru.h" />
 		<Unit filename="pesawat.h" />
 		<Unit filename="planet.h" />
 		<Unit filename="planetnamex.h" />
