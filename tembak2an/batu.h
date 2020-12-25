@@ -28,7 +28,7 @@ class Batu{
             glEnd();
 
             glBegin(GL_POLYGON);
-            glColor3f(255,182,193);
+            glColor3f(255,225,0);
             glVertex2f(1.93522, 0.73174); //titik untuk line
             glVertex2f(1.84556, 0.62793); //titik untuk line
             glVertex2f(1.94308, 0.60433);
@@ -37,7 +37,7 @@ class Batu{
             glEnd();
 
             glBegin(GL_POLYGON);
-            glColor3f(255,182,193);
+            glColor3f(255,225,0);
             glVertex2f(1.73954, 0.54281); //titik untuk line
             glVertex2f(1.70473, 0.48312); //titik untuk line
             glVertex2f(1.74949, 0.48312);
@@ -45,7 +45,7 @@ class Batu{
             glEnd();
 
             glBegin(GL_POLYGON);
-            glColor3f(255,69,0);
+            glColor3f(255,225,0);
             glVertex2f(2.03431, 0.93936);
             glVertex2f(2, 0.9); //titik untuk line
             glVertex2f(2.01229, 0.82296);
@@ -55,13 +55,25 @@ class Batu{
             glEnd();
 
             glBegin(GL_POLYGON);
-            glColor3f(255,69,0);
+            glColor3ub(255,225,0);
             glVertex2f(1.5011, 1.0526); //titik untuk line
             glVertex2f(1.45863, 1.0007); //titik untuk line
             glVertex2f(1.49638, 0.96924);
             glVertex2f(1.54514, 0.97553);
             glVertex2f(1.54042, 1.05575);
             glEnd();
+
+            glBegin(GL_POLYGON);
+            glColor3ub(255,225,0);
+            glVertex2f(1.67, 0.89); //titik untuk line
+            glVertex2f(1.6, 0.85); //titik untuk line
+            glVertex2f(1.62, 0.77);
+            glVertex2f(1.69, 0.75);
+            glVertex2f(1.75, 0.8);
+            glVertex2f(1.75, 0.84);
+            glVertex2f(1.7, 0.87);
+            glEnd();
+
 
         }
 };

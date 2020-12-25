@@ -31,26 +31,26 @@ void timer(int data)
 
     if(GetAsyncKeyState(VK_LEFT)){
         if (x>=-3){
-            x -= 0.1f;
+            x -= 0.3f;
         }
     }
     // Jika menekan tombol panah kanan
     else if(GetAsyncKeyState(VK_RIGHT)){
         if (x<=79) {
-            x+=0.1f;
+            x+=0.3f;
         }
     }
 
     // Jika menekan tombol panah atas
     if(GetAsyncKeyState(VK_UP)){
         if (y<=85) {
-            y+=0.1f;
+            y+=0.3f;
             }
         }
     // Jika menekan tombol panah bawah
     else if (GetAsyncKeyState(VK_DOWN)){
         if (y>=0){
-            y-=0.1f;
+            y-=0.3f;
         }
     }
 
