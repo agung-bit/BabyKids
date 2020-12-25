@@ -250,7 +250,32 @@
 
 1606796607 d:\grafika komputer\babykids\tembak2an\ufo.h
 
-1608901771 source:d:\grafkom\babykids\tembak2an\main.cpp
+1608925989 source:d:\grafkom\babykids\tembak2an\main.cpp
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+	"pesawat.h"
+	"satelit.h"
+	"batu.h"
+	"meteor.h"
+	"planet.h"
+	"ufo.h"
+	"peluru.h"
+
+1607427884 d:\grafkom\babykids\tembak2an\pesawat.h
+
+1608901978 d:\grafkom\babykids\tembak2an\ufo.h
+
+1608900294 d:\grafkom\babykids\tembak2an\satelit.h
+
+1608925989 d:\grafkom\babykids\tembak2an\batu.h
+
+1608902740 d:\grafkom\babykids\tembak2an\meteor.h
+
+1608866322 d:\grafkom\babykids\tembak2an\planet.h
+
+1608894996 source:d:\agung unej\grafkom\babykids\tembak2an\main.cpp
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
@@ -262,36 +287,17 @@
 	"planet.h"
 	"ufo.h"
 
-1607427884 d:\grafkom\babykids\tembak2an\pesawat.h
+1608894806 d:\agung unej\grafkom\babykids\tembak2an\pesawat.h
 
-1608901978 d:\grafkom\babykids\tembak2an\ufo.h
+1608894806 d:\agung unej\grafkom\babykids\tembak2an\satelit.h
 
-1608900294 d:\grafkom\babykids\tembak2an\satelit.h
+1608895567 d:\agung unej\grafkom\babykids\tembak2an\batu.h
 
-1608865131 d:\grafkom\babykids\tembak2an\batu.h
+1608894806 d:\agung unej\grafkom\babykids\tembak2an\meteor.h
 
-1608902740 d:\grafkom\babykids\tembak2an\meteor.h
+1608894806 d:\agung unej\grafkom\babykids\tembak2an\planet.h
 
-1608866322 d:\grafkom\babykids\tembak2an\planet.h
+1608894806 d:\agung unej\grafkom\babykids\tembak2an\ufo.h
 
-1608879811 source:d:\agung unej\grafkom\babykids\tembak2an\main.cpp
-	<windows.h>
-	<GL/gl.h>
-	<GL/glu.h>
-	<GL/glut.h>
-	"pesawat.h"
-	"satelit.h"
-	"batu.h"
-	"meteor.h"
-	"planet.h"
-
-1608875129 d:\agung unej\grafkom\babykids\tembak2an\pesawat.h
-
-1608875129 d:\agung unej\grafkom\babykids\tembak2an\satelit.h
-
-1608875129 d:\agung unej\grafkom\babykids\tembak2an\batu.h
-
-1608879622 d:\agung unej\grafkom\babykids\tembak2an\meteor.h
-
-1608875129 d:\agung unej\grafkom\babykids\tembak2an\planet.h
+1608924207 d:\grafkom\babykids\tembak2an\peluru.h
 
