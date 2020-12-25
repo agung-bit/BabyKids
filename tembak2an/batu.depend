@@ -273,3 +273,24 @@
 
 1608866322 d:\grafkom\babykids\tembak2an\planet.h
 
+1608879811 source:d:\agung unej\grafkom\babykids\tembak2an\main.cpp
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+	"pesawat.h"
+	"satelit.h"
+	"batu.h"
+	"meteor.h"
+	"planet.h"
+
+1608875129 d:\agung unej\grafkom\babykids\tembak2an\pesawat.h
+
+1608875129 d:\agung unej\grafkom\babykids\tembak2an\satelit.h
+
+1608875129 d:\agung unej\grafkom\babykids\tembak2an\batu.h
+
+1608879622 d:\agung unej\grafkom\babykids\tembak2an\meteor.h
+
+1608875129 d:\agung unej\grafkom\babykids\tembak2an\planet.h
+

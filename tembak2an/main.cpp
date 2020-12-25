@@ -77,7 +77,7 @@ void displayMe(void) {
     glPopMatrix();
 
     glPushMatrix();
-    glScaled(10,30,0);
+    glScaled(40,20,0);
     batu.drawBatu();
     glPopMatrix();
 
@@ -86,7 +86,7 @@ void displayMe(void) {
     glPopMatrix();
 
     glPushMatrix();
-    glScaled(1,1.3,0);
+    glScaled(1,1,0);
     meteor.munyerMeteorid();
     glPopMatrix();
 
