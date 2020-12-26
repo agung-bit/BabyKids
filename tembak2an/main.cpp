@@ -8,6 +8,7 @@
 #include "planet.h"
 #include "ufo.h"
 #include "peluru.h"
+#include "menu.h"
 #include <ctime>
 
 Pesawat pesawat;
@@ -16,6 +17,7 @@ Meteor meteor;
 Planet planet;
 Ufo ufo;
 Peluru peluru;
+Menu menu;
 
 float x;
 float y;

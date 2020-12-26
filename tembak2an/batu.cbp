@@ -42,13 +42,16 @@
 			<Add library="gdi32" />
 			<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/lib" />
 		</Linker>
+		<Unit filename="bacrond.h" />
 		<Unit filename="batu.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menu.h" />
 		<Unit filename="meteor.h" />
 		<Unit filename="peluru.h" />
 		<Unit filename="pesawat.h" />
 		<Unit filename="planet.h" />
 		<Unit filename="planetnamex.h" />
+		<Unit filename="printer.h" />
 		<Unit filename="satelit.h" />
 		<Unit filename="ufo.h" />
 		<Extensions>

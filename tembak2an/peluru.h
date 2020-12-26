@@ -6,6 +6,7 @@ class Peluru{
             glVertex2f(0.5, 2.24); //titik untuk line
             glVertex2f(1, 2.24); //titik untuk line
             glVertex2f(0.75, 3);
+            glEnd();
 
             glBegin(GL_POLYGON); //kotak 1
             glColor3f(0.75,0.75,0.75);
@@ -13,6 +14,7 @@ class Peluru{
             glVertex2f(1, 2); //titik untuk line
             glVertex2f(1, 2.24);
             glVertex2f(0.5, 2.24);
+            glEnd();
 
             glBegin(GL_POLYGON); //trapesium
             glColor3f(0.75,0.75,0.75);
@@ -20,6 +22,7 @@ class Peluru{
             glVertex2f(1.21, 1.72); //titik untuk line
             glVertex2f(1, 2);
             glVertex2f(0.5, 2);
+            glEnd();
 
             glBegin(GL_POLYGON); //kotak 2
             glColor3f(0.75,0.75,0.75);
@@ -27,6 +30,7 @@ class Peluru{
             glVertex2f(1.21, 1.72); //titik untuk line
             glVertex2f(1.2, 0.31);
             glVertex2f(0.29, 0.31);
+            glEnd();
 
             glBegin(GL_POLYGON); //kotak 3
             glColor3f(1,1,1);
@@ -34,6 +38,7 @@ class Peluru{
             glVertex2f(1.2, 0.31); //titik untuk line
             glVertex2f(1.2, 0.1);
             glVertex2f(0.29, 0.1);
+            glEnd();
 
         }
 
