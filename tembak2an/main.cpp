@@ -8,7 +8,6 @@
 #include "planet.h"
 #include "ufo.h"
 #include "peluru.h"
-#include "menu.h"
 #include <ctime>
 
 Pesawat pesawat;
@@ -17,18 +16,25 @@ Meteor meteor;
 Planet planet;
 Ufo ufo;
 Peluru peluru;
-Menu menu;
 
 float x;
 float y;
 float ranX = (rand() % 95 + 5);
 float ranY = 120;
-
+float peluruX;
+float peluruY;
+float jumlah = 0;
 
 void timer(int data)
 {
     satelit.moveSatelit();
     meteor.moveMeteorid();
+
+    peluru.movePeluru();
+    if(peluru.peluruMulai[0] == jumlah){
+        peluruX = x;
+        peluruY = y;
+    }
 
 
     // Jika menekan tombol panah kiri
@@ -105,6 +111,11 @@ void displayMe(void) {
     glScaled(3,3,0);
     ufo.drawUfo();
     glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(peluruX, peluruY, 0);
+    //peluru.colPeluru();
+    peluru.manggilPeluru();
 
     glPushMatrix();
     glTranslatef(x, y, 0);

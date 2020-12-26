@@ -45,12 +45,12 @@ class Peluru{
        void manggilPeluru(){
 
             glPushMatrix();
-            glTranslatef(15, peluruMulai[0], 0);
+            glTranslatef(8, peluruMulai[0], 0);
             drawPeluru();
             glPopMatrix();
 
             glPushMatrix();
-            glTranslatef(24, peluruMulai[0], 0);
+            glTranslatef(20, peluruMulai[0], 0);
             drawPeluru();
             glPopMatrix();
         }
