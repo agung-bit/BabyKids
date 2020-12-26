@@ -4,15 +4,14 @@
 #include <GL/glut.h> // library grafik dari opengl
 #include "pesawat.h"
 #include "satelit.h"
-#include "batu.h"
 #include "meteor.h"
 #include "planet.h"
 #include "ufo.h"
 #include "peluru.h"
+#include <ctime>
 
 Pesawat pesawat;
 Satelit satelit;
-Batu batu;
 Meteor meteor;
 Planet planet;
 Ufo ufo;
@@ -20,50 +19,43 @@ Peluru peluru;
 
 float x;
 float y;
-float ranX = (rand() % 40 + 5);
+float ranX = (rand() % 95 + 5);
 float ranY = 120;
-float peluruX;
-float peluruY;
-float ujung = 5;
 
-float grafitasi = 0;
-bool bergeser = true;
 
 void timer(int data)
 {
     satelit.moveSatelit();
     meteor.moveMeteorid();
-    ufo.moveUfo();
-    peluru.movePeluru();
 
 
     // Jika menekan tombol panah kiri
 
     if(GetAsyncKeyState(VK_LEFT)){
         if (x>=-3){
-            x -= 0.3f;
+            x -= 0.1f;
         }
     }
     // Jika menekan tombol panah kanan
     else if(GetAsyncKeyState(VK_RIGHT)){
         if (x<=79) {
-            x+=0.3f;
+            x+=0.1f;
         }
     }
 
     // Jika menekan tombol panah atas
     if(GetAsyncKeyState(VK_UP)){
         if (y<=85) {
-            y+=0.3f;
+            y+=0.1f;
             }
         }
     // Jika menekan tombol panah bawah
     else if (GetAsyncKeyState(VK_DOWN)){
         if (y>=0){
-            y-=0.3f;
+            y-=0.1f;
         }
-    }
 
+    }
     srand((unsigned) time(0)); //srand supaya tiap pemanggilan random valuenya selalu berubah
     if (ranY >= -30) {
         ranY -= 0.03f;
@@ -73,7 +65,6 @@ void timer(int data)
         ranX = (rand() % 80);
         //cout << "ranY = " << ranY;
     }
-
     glutPostRedisplay();
 	glutTimerFunc(1,timer,0);
 }
@@ -100,34 +91,17 @@ void displayMe(void) {
     glPopMatrix();
 
     glPushMatrix();
-    glScaled(40,20,0);
-    batu.drawBatu();
-    glPopMatrix();
-
-    glPushMatrix();
     satelit.munyerSatelit();
     glPopMatrix();
 
     glPushMatrix();
-    glScaled(0.5,0.5,0);
     meteor.munyerMeteorid();
     glPopMatrix();
 
     glPushMatrix();
-    glScaled(3,3,0);
-    ufo.munyerUfo();
-    glPopMatrix();
-
-    glPushMatrix();
     glTranslatef(ranX,ranY,0);
-    //pesawatt.colPesawatt();
-    pesawatt.drawPesawatt();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(peluruX, peluruY, 0);
-    //peluru.colPeluru();
-    peluru.manggilPeluru();
+    glScaled(3,3,0);
+    ufo.drawUfo();
     glPopMatrix();
 
     glPushMatrix();
@@ -151,8 +125,8 @@ void myinit() {
 }
 
 int main(int argc, char** argv){ // atur display
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
+	glutInit(&argc, argv);// inisialisasi GLUT
+	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);// Mengatur mode tampilan
 	glutInitWindowSize(900, 600); // ukuran display
 	glutInitWindowPosition(50, 0); // posisi program
 	glutCreateWindow("BIBU"); // nama window
